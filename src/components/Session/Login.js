@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div className="relative">
       {/* Header */}
-      <div className="z-10 absolute w-full md:w-1/6 m-3">
+      <div>
         <Header />
       </div>
 
