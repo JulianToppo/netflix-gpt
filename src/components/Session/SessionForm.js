@@ -2,12 +2,11 @@ import React, { useState, useRef } from "react";
 import { loginValidation } from "../../utils/loginValidation";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth} from '../../utils/firebase'
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+
 
 const SessionForm = () => {
 
-  const navigate=useNavigate();
+  
   const [registered, setRegistered] = useState(false);
   const [loginErrorMessage, setloginErrorMessage] = useState("");
   const [loginErrorDisplay, setLoginErrorDisplay] = useState(""); 
@@ -32,13 +31,12 @@ const SessionForm = () => {
           .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-              navigate("/browser")
               console.log(user);
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            setloginErrorMessage(errorMessage)
+            setloginErrorMessage(errorCode+" "+errorMessage)
           });
       } else {
         //sign up
@@ -53,14 +51,13 @@ const SessionForm = () => {
             updateProfile(user, {
               displayName: username.current.value, photoURL: "https://media.istockphoto.com/id/1414352099/photo/close-up-image-of-indian-man-filling-wooden-trough-on-residential-balcony-with-soil-and.jpg?s=1024x1024&w=is&k=20&c=hmegtd1CMTz5x5akKZ88YSNjZjbquHfsCD7z4YH2M54="
             }).then(() => {
-              navigate("/browser")
               console.log(user);
             })
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            setloginErrorMessage(errorMessage);
+            setloginErrorMessage(errorCode+" "+errorMessage);
           });
       }
     } else {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Session/Header'
 
-const BrowserHomePage = () => {
+const BrowseHomePage = () => {
   return (
     <div>
       <Header/>
@@ -9,4 +9,4 @@ const BrowserHomePage = () => {
   )
 }
 
-export default BrowserHomePage
+export default BrowseHomePage
