@@ -45,7 +45,7 @@ const Header = () => {
   }, [dispatch,navigate]);
 
   return (
-    <div className="flex justify-between absolute z-50 h-24">
+    <div className="flex flex-row absolute justify-around text-white w-screen z-50 h-24 px-10">
       <div>
         <img
           alt="logo"
