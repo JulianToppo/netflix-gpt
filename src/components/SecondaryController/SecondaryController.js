@@ -5,11 +5,9 @@ import { useSelector } from "react-redux";
 const SecondaryController = () => {
   const movies = useSelector((store) => store.moviesSlice);
 
-  console.log("secondary", movies?.nowPlayingMovies);
-
   return (
-    <div className="flex flex-col p-6 text-2xl -mt-16 text-white font-semibold z-40 bg-black">
-      <div className="-mt-60">
+    <div className="flex flex-col p-6 md:-mt-24 text-white font-semibold z-40 bg-black">
+      <div className="md:-mt-[120px]">
       {movies?.nowPlayingMovies && (
         <ShowMovieSet 
           title={"Now Playing"}

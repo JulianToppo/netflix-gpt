@@ -6,8 +6,11 @@ import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import MainController from "./MainController";
 import SecondaryController from "./SecondaryController/SecondaryController";
+import { useSelector } from "react-redux";
+import GptHomePage from "./Gpt/GptHomePage";
 
 const BrowseHomePage = () => {
+  const gpt = useSelector((store) => store.gptSlice);
   useNowPlayingMovies();
   usePopularMovies();
   useTopRatedMovies();
@@ -16,8 +19,17 @@ const BrowseHomePage = () => {
   return (
     <div className="flex flex-col">
       <Header />
-      <MainController />
-      <SecondaryController />
+      {!gpt.showGptPage && (
+        <>
+          <MainController />
+          <SecondaryController />
+        </>
+      )}
+      {
+        gpt.showGptPage && (
+          <GptHomePage/>
+        )
+      }
     </div>
   );
 };

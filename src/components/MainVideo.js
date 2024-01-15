@@ -13,7 +13,7 @@ const MainVideo = () => {
   return (
 
     movies?.movieVideos &&
-    <div className="w-screen relative z-0 overflow-hidden">
+    <div className="w-screen relative z-0 overflow-hidden min-h-28">
       <MainVideoBackground />
     </div>
   );
