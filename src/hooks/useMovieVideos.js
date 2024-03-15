@@ -5,7 +5,7 @@ import { addMovieVideos } from "../utils/movieSlice";
 
 const useMovieVideos = (movie_id) => {
   const dispatch = useDispatch();
-
+  console.log("add movie videos")
   useEffect(() => {
     const fetchData = async () => {
       try {

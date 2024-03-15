@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { loginValidation } from "../../utils/loginValidation";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth} from '../../utils/firebase'
+import { useNavigate } from "react-router-dom";
 
 
 const SessionForm = () => {
@@ -16,6 +17,7 @@ const SessionForm = () => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
+
     const checkLoginValidations = loginValidation(
       email.current.value,
       password.current.value
@@ -32,6 +34,8 @@ const SessionForm = () => {
             // Signed in
             const user = userCredential.user;
               console.log(user);
+            
+              
           })
           .catch((error) => {
             const errorCode = error.code;

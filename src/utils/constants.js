@@ -1,3 +1,5 @@
+
+
 export const API_OPTIONS={
   method: 'GET',
   headers: {
@@ -6,4 +8,10 @@ export const API_OPTIONS={
   }
 };
 
-export const tmdbDBUrl="https://www.themoviedb.org/t/p/w220_and_h330_face/"
+export const openAIKey='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';
+
+export const tmdbDBUrl="https://www.themoviedb.org/t/p/w220_and_h330_face/";
+
+export const tmdbDBPoster="https://media.themoviedb.org/t/p/w300_and_h450_bestv2"
+
+export const DBURLOriginal="https://image.tmdb.org/t/p/original"
