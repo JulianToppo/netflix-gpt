@@ -56,7 +56,7 @@ const Header = () => {
   }
 
   return (
-    <div className="flex flex-row  absolute justify-around bg-gradient-to-b from-black text-white w-screen z-50 h-24 px-10">
+    <div className="flex flex-row absolute justify-around bg-gradient-to-b from-black text-white w-screen z-50 h-24 px-10">
       <div>
         <img
           alt="logo"

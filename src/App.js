@@ -7,7 +7,7 @@ import MovieDetails from "./components/MovieDetails/MovieDetails";
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex h-screen w-full  items-center">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
