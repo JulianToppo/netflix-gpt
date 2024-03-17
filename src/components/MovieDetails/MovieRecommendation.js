@@ -14,14 +14,18 @@ const MovieRecommendation = ({ movieid }) => {
 
   return (
     movieRecommendations && (
-      <div >
+      <div>
         <p className="text-xl font-semibold">MovieRecommendation</p>
-        <div className="flex p-5 overflow-x-auto ">
-          {" "}
-          {movieRecommendations.results.map((movie) => {
-            return <MovieCard movieDetails={movie} />;
-          })}
-        </div>
+       
+          
+          {movieRecommendations && (
+            <div className="flex p-5 overflow-x-auto ">
+              {movieRecommendations.results.map((movie) => {
+                return <MovieCard movieDetails={movie} />;
+              })}{" "}
+            </div>
+          )}
+       
       </div>
     )
   );

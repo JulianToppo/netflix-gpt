@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { auth } from "../../utils/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../../utils/userSlice";
 import { toggleShowGptPage } from "../../utils/gptSlice";
+import { toggleShow } from "../../utils/movieDetailsSlice";
 
 const Header = () => {
   const currentUser = auth.currentUser;
@@ -12,7 +13,7 @@ const Header = () => {
   const dispatch = useDispatch();
   // const user = useSelector((store) =>store.userSlice);
   const gpt = useSelector((store) => store.gptSlice);
-
+  const movieDetails = useSelector((store) => store.movieDetailsSlice);
   console.log("currentuser", currentUser);
 
   const SignoutOnclickHandler = (e) => {
@@ -52,12 +53,27 @@ const Header = () => {
     }
   };
 
+  const onclickNetflixLogo = (e) => {
+    try {
+      e.preventDefault();
+      if (movieDetails.show == true) {
+        dispatch(toggleShow());
+      }
+      if (gpt.showGptPage == true) {
+        dispatch(toggleShowGptPage());
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="flex relative justify-around bg-gradient-to-b from-black text-white w-full z-50 h-1/12 px-10">
       <div>
         <img
+          onClick={onclickNetflixLogo}
           alt="logo"
-          className="z-10 w-full md:w-1/6 mt-3"
+          className="z-10 w-full md:w-1/6 mt-3 cursor-pointer"
           src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
         ></img>
       </div>

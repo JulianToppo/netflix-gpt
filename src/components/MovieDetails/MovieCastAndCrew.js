@@ -8,8 +8,8 @@ import MovieReview from "./MovieReview";
 
 const MovieCastAndCrew = ({ movieid }) => {
   const movieDetailsSlice = useSelector((store) => store.movieDetailsSlice);
-  const [movieCast, setMovieCast] = useState();
-  const [movieReview, setMovieReview] = useState();
+  const [movieCast, setMovieCast] = useState(null);
+  const [movieReview, setMovieReview] = useState(null);
   useMovieCredits(movieid);
   useMovieReviews(movieid);
 
