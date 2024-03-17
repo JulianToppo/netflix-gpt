@@ -19,10 +19,10 @@ const MovieDescription = ({ movieid }) => {
   return (
     movieDetails && (
       <div className=" w-full h-screen ">
-        <div className="h-screen w-screen absolute  z-10 bg-green-950 bg-opacity-80 bg-gradient-to-tl from-black to-gray-700"></div>
+        <div className="h-screen w-full absolute  z-10 bg-green-950 bg-opacity-80 bg-gradient-to-tl from-black to-gray-700"></div>
         <img
           src={DBURLOriginal + movieDetails.backdrop_path}
-          className="h-dvh w-screen absolute  z-10 opacity-20"
+          className="h-dvh w-full absolute  z-10 opacity-20"
         ></img>
         <div className="flex w-full  z-20 relative align-middle h-screen">
           <div className="w-5/12 flex items-center justify-center">
