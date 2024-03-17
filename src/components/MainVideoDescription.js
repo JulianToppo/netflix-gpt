@@ -7,17 +7,17 @@ const MainVideoDescription = () => {
 
   return (
     movies?.movieDetails && (
-      <div className="w-full relative z-40 py-60 px-16 text-white bg-gradient-to-r from-black">
-        <div className="w-1/2">
-          <p className="text-2xl font-extrabold">{movies.movieDetails.title}</p>
+      <div className="w-full sm:w-1/2 relative z-40 py-60 px-16 text-white bg-gradient-to-r from-black">
+        <div className="w-full ">
+          <p className="text-2xl sm:text-xl font-extrabold">{movies.movieDetails.title}</p>
           <p>{movies.movieDetails.tagline}</p>
           <br></br>
-          <p>{movies.movieDetails.overview}</p>
+          <p className="sm:xl">{movies.movieDetails.overview}</p>
           <p></p>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex  sm:space-x-0 md:space-x-4 w-full flex-wrap">
           
-            <button className="text-black flex items-center font-medium bg-white px-16 py-2 mt-2 shadow-sm rounded-sm hover:bg-slate-200 ">
+            <button className="text-black sm:w-1/2 flex items-center font-medium bg-white px-16 sm:px-[20%] py-2 mt-2 shadow-sm rounded-sm hover:bg-slate-200 ">
               <img
                 alt="play-button"
                 src="./icons/play.png"
@@ -28,7 +28,7 @@ const MainVideoDescription = () => {
           
 
            
-            <button className="text-black flex items-center  font-medium bg-white px-16 py-2 mt-2 shadow-sm rounded-sm hover:bg-slate-200">
+            <button className="text-black flex items-center   font-medium bg-white px-16 sm:px-0 py-2 mt-2 shadow-sm rounded-sm hover:bg-slate-200">
               <img
                 alt="info-button"
                 src="./icons/info.png"
