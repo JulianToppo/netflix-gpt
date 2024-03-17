@@ -7,7 +7,7 @@ const SecondaryController = () => {
 
   return (
     <div className="flex absolute flex-col w-full p-6  text-white font-semibold z-40 bg-black">
-      <div className="md:-mt-[120px]">
+      <div className="mt-[-10%] ">
       {movies?.nowPlayingMovies && (
         <ShowMovieSet 
           title={"Now Playing"}

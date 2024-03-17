@@ -53,7 +53,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex relative justify-around bg-gradient-to-b from-black text-white w-full z-50 h-1/6 px-10">
+    <div className="flex relative justify-around bg-gradient-to-b from-black text-white w-full z-50 h-1/12 px-10">
       <div>
         <img
           alt="logo"
@@ -62,7 +62,7 @@ const Header = () => {
         ></img>
       </div>
 
-      <div className="flex">
+      <div className="flex h-full ">
         {currentUser && (
           <div className="p-8 flex justify-around space-x-3">
             {/* <h5>{user.displayName}</h5> */}

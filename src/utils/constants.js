@@ -8,7 +8,7 @@ export const API_OPTIONS={
   }
 };
 
-export const openAIKey='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';
+export const openAIKey='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';
 
 export const tmdbDBUrl="https://www.themoviedb.org/t/p/w220_and_h330_face/";
 
