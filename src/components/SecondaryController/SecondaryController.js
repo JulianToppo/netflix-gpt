@@ -6,7 +6,7 @@ const SecondaryController = () => {
   const movies = useSelector((store) => store.moviesSlice);
 
   return (
-    <div className="flex flex-col p-6 md:-mt-24 text-white font-semibold z-40 bg-black">
+    <div className="flex absolute flex-col w-full p-6  text-white font-semibold z-40 bg-black">
       <div className="md:-mt-[120px]">
       {movies?.nowPlayingMovies && (
         <ShowMovieSet 

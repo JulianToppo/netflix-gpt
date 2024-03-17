@@ -13,7 +13,7 @@ const MainVideoBackground = () => {
   console.log("movieTrailer",movieTrailer)
  
   return (
-    <div className="pointer-events-none">
+    <div className="pointer-events-none w-full">
       <iframe
         className="w-screen aspect-video"
         src={`https://www.youtube.com/embed/${movieTrailer[0].key}?autoplay=1&mute=1`}

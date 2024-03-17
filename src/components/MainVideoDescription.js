@@ -7,7 +7,7 @@ const MainVideoDescription = () => {
 
   return (
     movies?.movieDetails && (
-      <div className="w-screen absolute z-40 py-60 px-16 text-white bg-gradient-to-r from-black">
+      <div className="w-full relative z-40 py-60 px-16 text-white bg-gradient-to-r from-black">
         <div className="w-1/2">
           <p className="text-2xl font-extrabold">{movies.movieDetails.title}</p>
           <p>{movies.movieDetails.tagline}</p>

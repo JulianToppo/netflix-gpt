@@ -8,7 +8,7 @@ const MainController = () => {
 
   return (
     movies?.nowPlayingMovies && (
-      <div className="flex"> 
+      <div className="flex-col w-full"> 
         <MainVideo />
         <MainVideoDescription />
         {/* 

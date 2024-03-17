@@ -20,20 +20,20 @@ const BrowseHomePage = () => {
   useUpcomingMovies();
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-screen w-full">
       <Header />
       {!gpt.showGptPage && (
-        <>
+        <div className="flex-col absolute w-full">
           {!movieDetails.show ? (
-            <>
-              {" "}
+            <div className="w-full">
+              
               <MainController />
               <SecondaryController />
-            </>
+            </div>
           ) : (
             <MovieDetails />
           )}
-        </>
+        </div>
       )}
       {gpt.showGptPage && <GptHomePage />}
     </div>

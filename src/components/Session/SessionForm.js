@@ -81,7 +81,7 @@ const SessionForm = () => {
   };
 
   return (
-    <div className="p-16 w-10/12 md:w-1/3 mx-auto  bg-black bg-opacity-80 rounded-lg">
+    <div className="p-16  w-10/12 md:w-1/3 mx-auto  bg-black bg-opacity-80 rounded-lg">
       <div>
         <p className="text-3xl py-3 font-semiboldbold text-white">
           {registered ? "Sign In" : "Sign up"}
