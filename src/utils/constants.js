@@ -8,7 +8,7 @@ export const API_OPTIONS={
   }
 };
 
-export const openAIKey='sk-proj-lzchZ2St4UU37jg8ZL7UT3BlbkFJ0qV7DANXth0JPf8u8G3O';
+export const openAIKey=process.env.OpenAi;
 
 export const tmdbDBUrl="https://www.themoviedb.org/t/p/w220_and_h330_face/";
 
