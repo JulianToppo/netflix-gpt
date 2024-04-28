@@ -108,7 +108,7 @@ const SessionForm = () => {
             ref={password}
             className="rounded-md my-4 w-full p-3"
             type="password"
-            placeholder="Password"
+            placeholder="Password(Minimum length 8)"
           ></input>
           <br />
           <p className="text-red-600">{loginErrorDisplay}</p>
