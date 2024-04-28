@@ -1,23 +1,16 @@
 const loginValidation = (email, password) => {
   try {
-    const emailCheck=/^[^\s@]+@[^\s@]+\.[^\s@]+$/g.test(email);
-   const passwordCheck = /^[a-zA-Z0-9]{8,}$/g.test(password);
+    const emailCheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/g.test(email);
 
-    console.log(emailCheck,passwordCheck)
-    if(emailCheck){
-        if(passwordCheck){
-          return true;
-        }
-        else{
-          return "Password is invalid";
-        }
-    }else{
+    console.log("Email:", emailCheck);
+
+    if (emailCheck) {
+      return true;
+    } else {
       return "Email is invalid";
     }
-
-
   } catch (error) {
-    console.log(error)
+    console.error("Error:", error);
   }
 };
 
